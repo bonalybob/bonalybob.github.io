@@ -66,7 +66,6 @@ header
 main
     transition:.3s
     display: grid
-
     grid-template-columns: 1fr 1fr
     grid-column-gap: 20px
     grid-row-gap: 20px
@@ -104,6 +103,33 @@ main
         &:hover
             box-shadow(2)
 
+    .message
+        padding-top:10px
+        width:100%
+        grid-column-start: 1;
+        grid-column-end: 3;
+        margin-bottom: 50px
+
+        h1
+            width: 100%
+            color: #2196F3
+            font-weight:300
+            font-family:Roboto
+            font-size:75px
+            text-align:center
+            padding:10px 0
+            margin:0
+
+        p
+            width: 100%
+            color: #2196F3
+            font-weight:300
+            font-family:Roboto
+            text-align:center
+            font-size:25px
+            padding:10px 0
+            margin:0
+
     #nevis
         background: linear-gradient(353deg,#1976d2,#4fc3f7)
 
@@ -126,7 +152,6 @@ footer
 @media (max-width:500px)
     header
         img
-
             height:250px
 
         h1
