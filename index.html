@@ -1,50 +1,56 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Bonalybob</title>
-    <link rel="icon" href="./NewLogoBlue.png">
-    <link rel="stylesheet" type="text/css" href="./styles.css" />
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="shortcut icon" href="NewLogoBlue.png" type="image/png">
 </head>
 
 <body>
     <header>
-        <img src="./NewLogo.png" alt="Rocket (Logo)" />
+        <img src="./NewLogo.png" alt="Rocket Logo">
         <h1>Bonalybob</h1>
-        <a href="https://github.com/bonalybob"> Check out my Github</a>
+        <a href="https://github.com/bonalybob">Check out my Github</a>
     </header>
     <main>
-        <a class="outer-link" href="https://bonalybob.github.io/nevis">
-            <div class="card" id="nevis">
-                <img src="./nevis.png" alt="Nevis Logo" />
-                <div>
-                    <h2>Nevis</h2>
-                    <p>Fast and Easy Results for Orienteering</p>
-                </div>
+        <h1>My Projects</h1>
+        <div id="projects">
+            <div id="nevis" class="project">
+
+                <img src="./NevisWhiteBorder.png" alt="Nevis Logo">
+                <h1>Nevis</h1>
+                <p>Event management software for orienteering which is quick and easy to use. It can read SI Cards over a serial
+                    connection and has live views of Entries + Results. Created using Electron
+                </p>
+                <a href="https://bonalybob.github.io/nevis">Visit Webpage</a>
             </div>
-        </a>
-        <a class="outer-link" href="https://bonalybob.github.io/wod-maze/">
-            <div class="card" id="wod">
-                <img src="./WOD.png" alt="World Orienteeering Day Logo" />
-                <div>
-                    <h2>WOD Maze Checker</h2>
-                    <p>Checks a Simple Maze Orienteering Course has been Completed </p>
-                </div>
+
+            <div id="simon" class="project">
+
+                <img src="./SimonGrid.png" alt="Simon Game Design">
+                <h1>Simon Game</h1>
+                <p>A simple memory game based on the popular Simon Game built using Vanilla JS, HTML5, Stylus and the Web Audio
+                    API
+                </p>
+                <a href="https://github.com/bonalybob/simon-game">View Source</a>
+                <a href="https://bonalybob.github.io/simon-game">View Demo</a>
             </div>
-        </a>
-        <a class="outer-link" href="https://bonalybob.github.io/simon-game">
-            <div class="card" id="simon">
-                <img src="./SimonGrid.png" alt="Simon Game" />
-                <div>
-                    <h2>Simon Game</h2>
-                    <p>A Simple Memory Game built in Javascript </p>
-                </div>
+
+            <div id="maze-checker" class="project">
+                <img src="./WOD.png" alt="World Orienteering Day Logo">
+                <h1>Maze Checker</h1>
+                <p>Checks if a simple maze orienteering course is completed correctly, by reading SI Cards and operates a simple
+                    leaderboard. Created using Electron for World Orienteering Day 2018</p>
+                <a href="https://bonalybob.github.io/maze-checker">Visit Webpage</a>
             </div>
-        </a>
+        </div>
     </main>
     <footer>
-        <p>Created by Bonalybob 2018</p>
+        <p>Made by Bonalybob 2018</p>
     </footer>
 </body>
 
