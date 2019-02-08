@@ -6,59 +6,78 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Ben Brown</title>
-    <link rel="stylesheet" href="./styles/styles.css">
-    <link rel="shortcut icon" href="./assets/LogoDark.png" type="image/png">
+    <link rel="stylesheet" href="/styles/styles.css">
+    <link rel="shortcut icon" href="/assets/LogoDark.png" type="image/png">
 </head>
 
 <body>
     <header>
+        <nav>
+            <h2>Ben Brown</h2>
+            <div id="links">
+                <a href="https://brownben.github.io/nevis">Nevis</a>
+                <a href="https://brownben.github.io/circuits-timer/">Circuits Timer</a>
+                <a href="https://brownben.github.io/simon-game">Simon Game</a>
+                <a href="https://github.com/brownben">My GitHub</a>
+            </div>
+            <svg id="menu-toggle" onClick="toggleMenu()" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <path d="M0 0h24v24H0z" fill="none" />
+                <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z" />
+            </svg>
+        </nav>
         <img src="./assets/NewLogo.png" alt="Rocket Logo">
         <h1>Ben Brown</h1>
-        <a href="https://github.com/brownben">Check out my Github</a>
     </header>
     <main>
-        <h1>My Projects</h1>
-        <div id="projects">
-            <div id="nevis" class="project">
-
-                <img src="./assets/NevisThickBorder.png" alt="Nevis Logo">
-                <h1>Nevis</h1>
-                <p>Event management software for orienteering is designed to be quick and easy to use. It can read SI Cards over a serial connection and has live views of Entries + Results. Created using Electron and
-                    Vue
-                </p>
-                <a href="https://brownben.github.io/nevis">View Website</a>
-            </div>
-
-            <div id="simon" class="project">
-
-                <img src="./assets/SimonGrid.png" alt="Simon Game Design">
-                <h1>Simon Game</h1>
-                <p>A simple memory game based on the popular Simon Game built using Vanilla JS, HTML5, Stylus and the Web Audio API
-                </p>
-                <a href="https://github.com/brownben/simon-game">View Source</a>
-                <a href="https://brownben.github.io/simon-game/">View Demo</a>
-            </div>
-
-            <div id="maze-checker" class="project">
-                <img src="./assets/WOD.png" alt="World Orienteering Day Logo">
-                <h1>Maze Checker</h1>
-                <p>Checks if a simple maze orienteering course is completed correctly, by reading SI Cards and operates a simple leaderboard. Created using Electron for World Orienteering Day 2018</p>
-                <a href="https://brownben.github.io/maze-checker">Visit Webpage</a>
-            </div>
-
-            <div id="circuits-timer" class="project">
-                <img src="./assets/circuit-timer.png" alt="Number 9 on Red Background (Circuit Timer Logo)">
-                <h1>Circuit Timer</h1>
-                <p>A timer for circuit training which beeps and displays a countdown for how much longer there is left in the current activity. Built using Promises and the Web Audio API with Vanilla JS, HTML and
-                    Stylus.</p>
-                <a href="https://github.com/brownben/circuits-timer">View Source</a>
-                <a href="https://brownben.github.io/circuits-timer/">View Demo</a>
-            </div>
+        <div class="project" id="nevis">
+            <img src="./assets/NevisThickBorder.png" alt="Nevis Logo">
+            <h2>Nevis</h2>
+            <p>
+                Event management software for orienteering is designed to be quick and easy to use. It can read SI Cards over a serial connection and has live views of Entries + Results. Created using Electron and Vue
+            </p>
+            <a href="https://brownben.github.io/nevis">View Website</a>
+        </div>
+        <div class="project" id="munro">
+            <img src="./assets/MunroLogo.png" alt="Munro Logo">
+            <h2>Munro</h2>
+            <p>
+                My Advanced Higher Computing Project, a dynamic SPA which calculates the results for a league of orienteering events and allows sorting and filtering of results. Interacts with a backend API made with
+                Flask to manage authentication and the database
+            </p>
+            <a href="#">Coming Soon</a>
+        </div>
+        <div class="project" id="simon">
+            <img src="./assets/SimonGrid.png" alt="Simon Game Design">
+            <h2>Simon Game</h2>
+            <p>A simple memory game based on the popular Simon Game built using Vanilla JS, HTML5, Stylus and the Web Audio API
+            </p>
+            <a href="https://github.com/brownben/simon-game">View Source</a>
+            <a href="https://brownben.github.io/simon-game/">View Demo</a>
+        </div>
+        <div class="project" id="wod-maze">
+            <img src="./assets/WOD.png" alt="World Orienteering Day Logo">
+            <h2>Maze Checker</h2>
+            <p>Checks if a simple maze orienteering course is completed correctly, by reading SI Cards and operates a simple leaderboard. Created using Electron for World Orienteering Day 2018</p>
+            <a href="https://brownben.github.io/maze-checker">Visit Webpage</a>
+        </div>
+        <div class="project" id="circuit-timer">
+            <img src="./assets/circuit-timer.png" alt="Number 9 on Red Background (Circuit Timer Logo)">
+            <h2>Circuit Timer</h2>
+            <p>A timer for circuit training which beeps and displays a countdown for how much longer there is left in the current activity. Built using Promises and the Web Audio API with Vanilla JS, HTML and
+                Stylus.</p>
+            <a href="https://github.com/brownben/circuits-timer">View Source</a>
+            <a href="https://brownben.github.io/circuits-timer/">View Demo</a>
         </div>
     </main>
     <footer>
         <p>Made by Ben Brown 2018</p>
     </footer>
 </body>
+<script>
+    function toggleMenu() {
+        console.log(1)
+        document.getElementById("links").classList.toggle("show")
+    }
+</script>
 
 </html>
