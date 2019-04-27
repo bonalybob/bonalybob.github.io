@@ -13,7 +13,26 @@
 <body>
   <noscript>
     <h1>Ben Brown</h1>
-    <strong>I'm sorry but my site doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
+    <p>I'm sorry but my site doesn't work properly without JavaScript enabled. Please enable it to continue.</p>
+    <style>
+      html,
+      body {
+        margin: 0
+      }
+
+      noscript {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        position: fixed;
+        width: 100vw;
+        height: 100vh;
+        background-color: #0D47A1;
+        color: white;
+        text-align: center;
+        padding: 1.5rem;
+        box-sizing: border-box;
+      }
+
+    </style>
   </noscript>
   <div id="app"></div>
   <!-- built files will be auto injected -->

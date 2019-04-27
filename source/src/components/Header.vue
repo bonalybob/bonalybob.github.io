@@ -2,12 +2,12 @@
   <header>
     <h1>
       <vue-typer
-        text="Hi I'm Ben"
-        repeat="0"
-        pre-type-delay="1500"
-        type-delay="125"
+        :text="text"
+        :repeat="0"
+        :pre-type-delay="1500"
+        :type-delay="125"
         caret-animation="phase"
-        :pre-erase-delay="30000"
+        @typed="typed"
       />
     </h1>
 
@@ -16,13 +16,21 @@
 </template>
 <script>
 import { VueTyper } from 'vue-typer'
+
 export default {
   components: {
     VueTyper,
   },
+
   data: () => ({
     dark: false,
+    countWord: 0,
+    text: 'Hi I\'m Ben',
   }),
+
+  mounted: function () {
+    if (window.innerWidth <= 700) this.text = 'Hi I\'m\nBen'
+  },
 }
 </script>
 <style lang="stylus">
@@ -41,10 +49,14 @@ header
   @media (max-width: 700px)
     min-height: 50vh
 
+    h1
+      font-size: 3.5rem
+
   .typed
     color: white
 
   h1
+    min-height: 5rem
     color: white
     font-size: 4rem
     font-family: 'Source Code Pro'
@@ -54,9 +66,10 @@ header
 
   a
     display: inline-block
-    margin-top: 2.5rem
+    margin-top: 3rem
     padding: 0.6rem 1.75rem
     width: auto
+    outline: 0
     border: white 1px solid
     border-radius: 2rem
     color: white
@@ -67,5 +80,9 @@ header
 
     &:hover
       background-color: alpha(white, 0.4)
+
+span.nowrap
+  white-space: nowrap
+  word-wrap: break-word
 </style>
 

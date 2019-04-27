@@ -52,6 +52,7 @@ footer
     margin: 1.5rem 0 0.5rem
     padding: 0.6rem 1.75rem
     width: auto
+    outline: 0
     border: #e0e0e0 1px solid
     border-radius: 2rem
     background-color: white
