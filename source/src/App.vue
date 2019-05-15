@@ -2,7 +2,7 @@
   <div id="app" :class="{dark: dark}">
     <page-header />
     <main>
-      <router-view :dark="dark" />
+      <home :dark="dark" />
     </main>
     <footer>
       <button v-if="dark" @click="dark = false">Use Light Theme</button>
@@ -14,10 +14,12 @@
 
 <script>
 import Header from '@/components/Header'
+import Home from '@/views/Home'
 
 export default {
   components: {
     'page-header': Header,
+    'home': Home,
   },
   data: () => ({
     dark: false,
@@ -25,8 +27,6 @@ export default {
 }
 </script>
 <style lang="stylus">
-@import url('https://fonts.googleapis.com/css?family=Source+Code+Pro')
-
 #app
   min-height: 100vh
 
@@ -36,7 +36,8 @@ html, body
 html, body, p, a, h1, h2, h3, h4, h5, h6, b, button, div, img
   margin: 0
   padding: 0
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+  font-weight: 300
+  font-family: -apple-system, BlinkMacSystemFont, Roboto, 'Segoe UI', Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
   transition: 0.3s
 
 main

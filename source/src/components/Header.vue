@@ -7,7 +7,6 @@
         :pre-type-delay="1500"
         :type-delay="125"
         caret-animation="phase"
-        @typed="typed"
       />
     </h1>
 
@@ -29,11 +28,30 @@ export default {
   }),
 
   mounted: function () {
-    if (window.innerWidth <= 700) this.text = 'Hi I\'m\nBen'
+    window.addEventListener('resize', this.handleResize)
+    this.handleResize()
+  },
+
+  destroyed () {
+    window.removeEventListener('resize', this.handleResize)
+  },
+
+  methods: {
+    handleResize: function () {
+      if (window.innerWidth <= 700) this.text = 'Hi I\'m\nBen'
+      else this.text = 'Hi I\'m Ben'
+    },
   },
 }
 </script>
 <style lang="stylus">
+@font-face
+  font-weight: 400
+  font-style: normal
+  font-family: 'Source Code Pro'
+  src: local('Source Code Pro'), local('SourceCodePro-Regular'), url('https://fonts.gstatic.com/l/font?kit=HI_SiYsKILxRpg3hIP6sJ7fM7PqVP_nbk4Vnjw3VYWo&skey=d94d317bc78fd84e&v=v9') format('woff2')
+  font-display: fallback
+
 header
   display: flex
   flex-direction: column
@@ -45,6 +63,7 @@ header
   background: linear-gradient(#0D47A1, #1976D2)
   box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.3)
   text-align: center
+  transition: 0.5s
 
   @media (max-width: 700px)
     min-height: 50vh
@@ -59,7 +78,7 @@ header
     min-height: 5rem
     color: white
     font-size: 4rem
-    font-family: 'Source Code Pro'
+    font-family: 'Source Code Pro', Inconsolata, 'Courier New', Courier, monospace
 
     .vue-typer span.typed
       color: white
