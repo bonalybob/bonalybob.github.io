@@ -1,0 +1,173 @@
+html, body
+  margin: 0
+  padding: 0
+  transition: 0.3s
+
+#typing
+  font-size: 2rem
+  font-family: Cabin
+
+h1, h2, h3, h4, h5, h6
+  margin: 0
+  font-family: Cabin
+  transition: 0.3s
+
+p, img
+  margin: 0
+  text-decoration: none
+  font-weight: 300
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif
+  transition: 0.3s
+
+@keyframes caret-phase
+  0%, 20%
+    opacity: 0
+
+  90%, 100%
+    opacity: 1
+
+.Typewriter__cursor
+  font-weight: 400
+  animation: caret-phase 0.5s ease-in-out 0s infinite alternate
+
+h1, .Typewriter__wrapper, .Typewriter__cursor
+  margin: 0
+  font-size: 4rem
+
+h1, #typing
+  padding: 2.5rem 0
+  font-weight: 600
+
+header
+  position: relative
+  display: flex
+  flex-direction: column
+  justify-content: center
+  margin-bottom: 2rem
+  min-height: 450px
+  height: 95vh
+  background: #12c2e9
+  background: -webkit-linear-gradient(45deg, #2D6DE9, #12c2e9)
+  background: linear-gradient(45deg, #2D6DE9, #12c2e9)
+  box-shadow: 0 8px 10px 1px rgba(0, 0, 0, 0.14), 0 3px 14px 2px rgba(0, 0, 0, 0.12), 0 5px 5px -3px rgba(0, 0, 0, 0.2)
+  color: white
+  text-align: center
+
+  a
+    display: inline-block
+    margin-top: 1.5rem
+    color: white
+    transition: 0.3s
+
+    svg
+      height: 3rem
+      transition: 0.4s
+      fill: white
+
+      &:hover
+        opacity: 0.75
+
+  #down
+    position: absolute
+    bottom: 1rem
+    margin: 0
+    width: 100%
+    height: 5rem
+    opacity: 0.5
+    fill: white
+
+#projects
+  padding: 0 17.5% 1rem
+  width: 65%
+
+  @media (max-width: 1000px)
+    padding: 1rem 10%
+    width: 80%
+
+  @media (max-width: 700px)
+    padding: 1rem 2rem
+    width: calc(100% - 4rem)
+
+  .project
+    margin: 1.5rem 0
+    padding: 0.5rem 1rem 1rem
+    border-top: 0.5rem solid #2D6DE9
+    box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.2)
+    text-align: center
+
+    &:first-child
+      margin-top: 0
+
+    img
+      box-sizing: border-box
+      padding: 0.5rem 0
+      height: 250px
+      object-fit: contain
+
+      @media (max-width: 700px)
+        height: 200px
+
+      @media (max-width: 500px)
+        height: 175px
+
+      &.mobile
+        padding-top: 0.5rem
+
+    .info
+      display: inline-block
+
+      h2
+        padding: 0.5rem 0
+        font-size: 1.75rem
+
+      a
+        display: inline-block
+        margin-top: 0.5rem
+        padding: 0.3rem 0.75rem
+        color: #2D6DE9
+        text-decoration: none
+        font-family: Cabin
+        transition: 0.3s
+
+        &:hover
+          background-color: alpha(#2D6DE9, 0.15)
+
+    @media (min-width: 1000px)
+      img
+        box-sizing: border-box
+        padding: 0
+        width: 50%
+        vertical-align: middle
+
+      .info
+        box-sizing: border-box
+        padding-left: 2rem
+        width: 49%
+        vertical-align: middle
+
+footer
+  width: 100%
+  text-align: center
+
+  .top
+    padding: 1rem
+    background-color: #2D6DE9
+
+    svg
+      height: 2.5rem
+      transition: 0.3s
+      fill: white
+
+      &:hover
+        opacity: 0.75
+
+  .bottom
+    background-color: darken(#2D6DE9, 7.5)
+
+  p
+    box-sizing: border-box
+    padding: 0.75rem
+    width: 100%
+    color: white
+    text-align: center
+    font-family: Cabin
