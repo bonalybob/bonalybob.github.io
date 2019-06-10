@@ -26,18 +26,6 @@ p, img
   90%, 100%
     opacity: 1
 
-.Typewriter__cursor
-  font-weight: 400
-  animation: caret-phase 0.5s ease-in-out 0s infinite alternate
-
-h1, .Typewriter__wrapper, .Typewriter__cursor
-  margin: 0
-  font-size: 4rem
-
-h1, #typing
-  padding: 2.5rem 0
-  font-weight: 600
-
 header
   position: relative
   display: flex
@@ -52,6 +40,18 @@ header
   box-shadow: 0 8px 10px 1px rgba(0, 0, 0, 0.14), 0 3px 14px 2px rgba(0, 0, 0, 0.12), 0 5px 5px -3px rgba(0, 0, 0, 0.2)
   color: white
   text-align: center
+
+  .Typewriter__cursor
+    font-weight: 400
+    animation: caret-phase 0.5s ease-in-out 0s infinite alternate
+
+  h1, .Typewriter__wrapper, .Typewriter__cursor
+    margin: 0
+    font-size: 4rem
+
+  h1, #typing
+    padding: 2.5rem 0
+    font-weight: 600
 
   a
     display: inline-block
@@ -76,7 +76,7 @@ header
     opacity: 0.5
     fill: white
 
-#projects
+main
   padding: 0 17.5% 1rem
   width: 65%
 
@@ -87,6 +87,18 @@ header
   @media (max-width: 700px)
     padding: 1rem 2rem
     width: calc(100% - 4rem)
+
+  a
+    display: inline-block
+    margin-top: 0.5rem
+    padding: 0.3rem 0.75rem
+    color: #2D6DE9
+    text-decoration: none
+    font-family: Cabin
+    transition: 0.3s
+
+    &:hover
+      background-color: alpha(#2D6DE9, 0.15)
 
   .project
     margin: 1.5rem 0
@@ -120,18 +132,6 @@ header
         padding: 0.5rem 0
         font-size: 1.75rem
 
-      a
-        display: inline-block
-        margin-top: 0.5rem
-        padding: 0.3rem 0.75rem
-        color: #2D6DE9
-        text-decoration: none
-        font-family: Cabin
-        transition: 0.3s
-
-        &:hover
-          background-color: alpha(#2D6DE9, 0.15)
-
     @media (min-width: 1000px)
       img
         box-sizing: border-box
@@ -144,6 +144,17 @@ header
         padding-left: 2rem
         width: 49%
         vertical-align: middle
+
+  &.error
+    padding-top: 0
+    padding-bottom: 2rem
+
+    h1
+      padding: 1rem 0
+      font-size: 2rem
+
+    p
+      padding: 1rem 0
 
 footer
   width: 100%
